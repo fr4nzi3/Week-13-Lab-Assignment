@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flowchart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .box {
+            width: 200px;
+            height: 100px;
+            border: 2px solid #333;
+            background-color: #f0f0f0;
+            text-align: center;
+            line-height: 100px;
+            margin: 10px;
+            cursor: pointer;
+            position: relative;
+        }
+        .box:hover {
+            background-color: #ccc;
+        }
+        .horizontal-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .vertical-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        /* Add dashed border to Landing Page box */
+        .box.landing-page::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            border-bottom: 2px dashed pink; /* Change color to pink */
+            bottom: -2px;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="horizontal-container">
+        <!-- Add class "landing-page" to Landing Page box -->
+        <div class="box landing-page" onclick="goToLandingPage()">Landing Page</div>
+        <div class="box" onclick="goToWeek13()">Week 13</div>
+    </div>
+
+    <div class="vertical-container">
+        <div class="box" onclick="goToGeolocation()">Geolocation</div>
+        <div class="box" onclick="goToDragAndDrop()">Drag and Drop</div>
+        <div class="box" onclick="goToWebXR()">Web XR</div>
+    </div>
+
+    <script>
+        function goToLandingPage() {
+            window.location.href = "landing_page.html";
+        }
+
+        function goToWeek13() {
+            window.location.href = "week13.html";
+        }
+
+        function goToGeolocation() {
+            window.location.href = "geolocation.html";
+        }
+
+        function goToDragAndDrop() {
+            window.location.href = "drag_and_drop.html";
+        }
+
+        function goToWebXR() {
+            window.location.href = "web_xr.html";
+        }
+    </script>
+</body>
+</html>
+

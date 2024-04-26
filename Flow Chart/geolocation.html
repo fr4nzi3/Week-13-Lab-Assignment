@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geolocation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #coordinates {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="coordinates">
+        <h2>Coordinates</h2>
+        <p id="latitude">Latitude: </p>
+        <p id="longitude">Longitude: </p>
+        <button onclick="getCoordinates()">Get coordinates</button>
+    </div>
+
+    <script>
+        function getCoordinates() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                alert("Geolocation is not supported by this browser.");
+            }
+        }
+
+        function showPosition(position) {
+            var latitude = position.coords.latitude;
+            var longitude = position.coords.longitude;
+            document.getElementById("latitude").innerHTML = "Latitude: " + latitude;
+            document.getElementById("longitude").innerHTML = "Longitude: " + longitude;
+        }
+    </script>
+</body>
+</html>
