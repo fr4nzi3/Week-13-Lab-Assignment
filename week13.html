@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flowchart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .box {
+            width: 200px;
+            height: 100px;
+            border: 2px solid #333;
+            background-color: #f0f0f0;
+            text-align: center;
+            line-height: 100px;
+            margin: 20px;
+            cursor: pointer;
+        }
+        .box:hover {
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" onclick="goToLandingPage()">Landing Page</div>
+        <div class="box" onclick="goToWeek13()">Week 13</div>
+        <div class="box" onclick="goToGeolocation()">Geolocation</div>
+        <div class="box" onclick="goToDragAndDrop()">Drag and Drop</div>
+        <div class="box" onclick="goToWebVR()">Web VR</div>
+    </div>
+
+    <script>
+        function goToLandingPage() {
+            window.location.href = "landing_page.html";
+        }
+
+        function goToWeek13() {
+            window.location.href = "week13.html";
+        }
+
+        function goToGeolocation() {
+            window.location.href = "geolocation.html";
+        }
+
+        function goToDragAndDrop() {
+            window.location.href = "drag_and_drop.html";
+        }
+
+        function goToWebVR() {
+            window.location.href = "web_vr.html";
+        }
+    </script>
+</body>
+</html>
